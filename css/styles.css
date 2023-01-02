@@ -126,6 +126,7 @@ ul {
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
+  min-width: 320px;
 
   /* outline: 1px solid red; */
 }
@@ -207,6 +208,7 @@ ul {
 
 .header-wrapper {
   display: flex;
+  align-items: center;
 }
 
 .header-shadow {
@@ -237,6 +239,8 @@ ul {
   }
 
   .mobile-btn {
+    display: flex;
+    align-items: center;
     margin-left: auto;
     background-color: transparent;
     border: none;
@@ -248,121 +252,6 @@ ul {
   width: 32px;
   height: 22px;
 }
-
-/* ---mobile menu--- */
-.mobile-container {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin-left: auto;
-  margin-right: auto;
-
-  width: 428px;
-  padding-left: 40px;
-  padding-top: 80px;
-  padding-bottom: 40px;
-  outline: 1px solid red;
-
-  background-color: #fff;
-}
-
-@media screen and (min-width: 480px) {
-  .mobile-container {
-    display: none;
-  }
-}
-
-.js-menu-container {
-}
-
-.mobile-close-btn {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-
-  background-color: var(--color-btn-modal-border);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-
-  cursor: pointer;
-
-  transition: background-color var(--transition), border-color var(--transition),
-    fill var(--transition);
-}
-
-.mobile-close-btn:hover,
-.mobile-close-btn:focus {
-  background-color: var(--color-btn-modal-defoult);
-  border-color: var(--color-btn-modal-defoult);
-  fill: var(--color-modal-btn-icon);
-}
-
-.mobile-close-btn:active {
-  background-color: var(--color-btn-modal-press);
-  border-color: var(--color-btn-modal-press);
-  fill: var(--color-modal-icon);
-}
-
-.js-close-menu {
-}
-
-.mobile-nav-menu {
-}
-
-.mobile-nav-menu-list {
-}
-
-.mobile-nav-menu-item:not(:last-child) {
-  margin-bottom: 40px;
-}
-
-.mobile-nav-menu-item {
-  margin-bottom: 284px;
-}
-
-.mobile-nav-menu-link,
-.mobile-current-page {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: var(--color-font-heading);
-}
-
-.mobile-current-page {
-  color: var(--color-font-acent);
-}
-
-.mobile-contact-list {
-  margin-bottom: 48px;
-}
-
-.mobile-contact-item:first-child {
-  margin-bottom: 40px;
-}
-
-.mobile-contact-link {
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 1.11;
-  color: var(--color-font-acent);
-}
-
-.mail-contact-link {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: var(--color-font-text);
-}
-/* ---mobile menu--- */
 
 @media screen and (min-width: 768px) {
   .mobile-btn {
@@ -515,9 +404,7 @@ ul {
   color: var(--color-font-hero);
 }
 
-@media screen and (min-device-pixel-ratio: 1) and (min-width: 768px),
-  screen and (min-resolution: 96dpi) and (min-width: 768px),
-  screen and (min-resolution: 1dppx) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/hero/tablet-bg.jpg);
@@ -549,9 +436,7 @@ ul {
   }
 }
 
-@media screen and (min-device-pixel-ratio: 1) and (min-width: 1200px),
-  screen and (min-resolution: 96dpi) and (min-width: 1200px),
-  screen and (min-resolution: 1dppx) and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .hero {
     padding-top: 188px;
     padding-bottom: 188px;
@@ -1240,7 +1125,7 @@ ul {
 }
 
 .examples-item {
-  width: 396px;
+  min-width: 320px;
 
   transition: box-shadow var(--transition);
 }
@@ -1248,7 +1133,6 @@ ul {
 .overlay {
   position: relative;
   width: 100%;
-  height: 280px;
 
   overflow: hidden;
   transform: translateY(0);
@@ -1285,7 +1169,7 @@ ul {
 
 .examples-image {
   display: block;
-  width: 100%;
+  max-width: 100%;
   background-color: var(--color-bg-overlay);
 }
 
@@ -1379,7 +1263,6 @@ ul {
   opacity: 1;
 
   width: 408px;
-  height: 576px;
   padding-top: 72px;
   padding-bottom: 24px;
   padding-left: 24px;
@@ -1391,6 +1274,18 @@ ul {
   border-radius: 4px;
 
   transition: transform var(--transition-fast) 250ms, opacity var(--transition-fast) 250ms;
+}
+
+@media screen and (min-width: 428px) {
+  .modal {
+    max-width: 392px;
+  }
+}
+
+@media screen and (min-width: 320px), screen and (max-width: 427px) {
+  .modal {
+    width: calc(100% - 36px);
+  }
 }
 
 /* animation open modal window */
@@ -1660,4 +1555,113 @@ ul {
 /* /button for send */
 /* ----------------------------
 ------- /MODAL FORM -------
+---------------------------- */
+
+/* ----------------------------
+------- MOBILE MENU -------
+---------------------------- */
+.menu-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 100vw;
+  height: 100vh;
+  padding-left: 40px;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  outline: 1px solid red;
+
+  background-color: #fff;
+
+  transform: translateX(100%);
+  transition: transform var(--transition-fast);
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.mobile-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+
+  background-color: var(--color-btn-modal-border);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition: background-color var(--transition), border-color var(--transition),
+    fill var(--transition);
+}
+
+.mobile-close-btn:hover,
+.mobile-close-btn:focus {
+  background-color: var(--color-btn-modal-defoult);
+  border-color: var(--color-btn-modal-defoult);
+  fill: var(--color-modal-btn-icon);
+}
+
+.mobile-close-btn:active {
+  background-color: var(--color-btn-modal-press);
+  border-color: var(--color-btn-modal-press);
+  fill: var(--color-modal-icon);
+}
+
+.mobile-nav-menu-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mobile-nav-menu-item {
+  margin-bottom: 284px;
+}
+
+.mobile-nav-menu-link,
+.mobile-current-page {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--color-font-heading);
+}
+
+.mobile-current-page {
+  color: var(--color-font-acent);
+}
+
+.mobile-contact-list {
+  margin-bottom: 48px;
+}
+
+.mobile-contact-item:first-child {
+  margin-bottom: 40px;
+}
+
+.mobile-contact-link {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.11;
+  color: var(--color-font-acent);
+}
+
+.mail-contact-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--color-font-text);
+}
+/* ----------------------------
+------- /MOBILE MENU -------
 ---------------------------- */

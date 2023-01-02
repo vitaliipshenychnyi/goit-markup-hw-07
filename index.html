@@ -25,14 +25,6 @@
           <span class="logo-acent">WEB</span>STUDIO
         </a>
 
-        <!-- ---mobile button--- -->
-        <button class="mobile-btn js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-          <svg class="menu-hamburger">
-            <use href="./images/icons/icons.svg#iconmenu_40px"></use>
-          </svg>
-        </button>
-        <!-- ---mobile button--- -->
-
         <div class="header-nav-wrapper">
           <nav class="header-nav-menu">
             <ul class="header-nav-menu-list list">
@@ -58,75 +50,15 @@
             </li>
           </ul>
         </div>
-      </div>
 
-      <!-- ---mobile menu--- -->
-      <div class="mobile-container js-menu-container" id="mobile-menu">
-        <button class="mobile-close-btn js-close-menu">
-          <svg width="8" height="8">
-            <use href="./images/icons/icons.svg#close-black"></use>
+        <!-- mobile button -->
+        <button class="mobile-btn js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="menu-hamburger">
+            <use href="./images/icons/icons.svg#iconmenu_40px"></use>
           </svg>
         </button>
-
-        <nav class="mobile-nav-menu">
-          <ul class="mobile-nav-menu-list list">
-            <li class="mobile-nav-menu-item">
-              <a class="mobile-current-page link" href="./index.html">Studio</a>
-            </li>
-            <li class="mobile-nav-menu-item">
-              <a class="mobile-nav-menu-link link" href="./portfolio.html">Portfolio</a>
-            </li>
-            <li class="mobile-nav-menu-item">
-              <a class="mobile-nav-menu-link link" href="">Contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="mobile-contact-list list">
-          <li class="mobile-contact-item">
-            <a class="mobile-contact-link link" href="tel:+110001111111">+11 (000) 111-11-11</a>
-          </li>
-          <li class="mobile-contact-item">
-            <a class="mail-contact-link link" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
-          </li>
-        </ul>
-
-        <ul class="team-social-list list">
-          <li>
-            <a class="team-social-link" href="#" aria-label="link-instagram">
-              <svg class="team-social-icon">
-                <use href="./images/icons/icons.svg#instagram"></use>
-              </svg>
-            </a>
-          </li>
-
-          <li>
-            <a class="team-social-link" href="#" aria-label="link-twitter">
-              <svg class="team-social-icon">
-                <use href="./images/icons/icons.svg#twitter"></use>
-              </svg>
-            </a>
-          </li>
-
-          <li>
-            <a class="team-social-link" href="#" aria-label="link-facebook">
-              <svg class="team-social-icon">
-                <use href="./images/icons/icons.svg#facebook"></use>
-              </svg>
-            </a>
-          </li>
-
-          <li>
-            <a class="team-social-link" href="#" aria-label="link-linkedin">
-              <svg class="team-social-icon">
-                <use href="./images/icons/icons.svg#linkedin"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <!-- /mobile button/ -->
       </div>
-      <!-- ---mobile menu--- -->
     </header>
 
     <main>
@@ -228,6 +160,7 @@
                 class="work-image"
                 srcset="./images/projects/telephone-in-hand@2x.jpg 2x"
                 src="./images/projects/telephone-in-hand.jpg"
+                alt="telephone-in-hand"
               />
             </li>
           </ul>
@@ -646,6 +579,72 @@
           <button class="modal-btn-send" type="submit">Send</button>
         </form>
       </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="mobile-close-btn js-close-menu">
+        <svg width="8" height="8">
+          <use href="./images/icons/icons.svg#close-black"></use>
+        </svg>
+      </button>
+
+      <nav class="mobile-nav-menu">
+        <ul class="mobile-nav-menu-list list">
+          <li class="mobile-nav-menu-item">
+            <a class="mobile-current-page link" href="./index.html">Studio</a>
+          </li>
+          <li class="mobile-nav-menu-item">
+            <a class="mobile-nav-menu-link link" href="./portfolio.html">Portfolio</a>
+          </li>
+          <li class="mobile-nav-menu-item">
+            <a class="mobile-nav-menu-link link" href="">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="mobile-contact-list list">
+        <li class="mobile-contact-item">
+          <a class="mobile-contact-link link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+        </li>
+        <li class="mobile-contact-item">
+          <a class="mail-contact-link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </li>
+      </ul>
+
+      <ul class="team-social-list list">
+        <li>
+          <a class="team-social-link" href="#" aria-label="link-instagram">
+            <svg class="team-social-icon">
+              <use href="./images/icons/icons.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a class="team-social-link" href="#" aria-label="link-twitter">
+            <svg class="team-social-icon">
+              <use href="./images/icons/icons.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a class="team-social-link" href="#" aria-label="link-facebook">
+            <svg class="team-social-icon">
+              <use href="./images/icons/icons.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a class="team-social-link" href="#" aria-label="link-linkedin">
+            <svg class="team-social-icon">
+              <use href="./images/icons/icons.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </div>
 
     <script src="./js/modal.js"></script>

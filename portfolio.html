@@ -25,10 +25,6 @@
           <span class="logo-acent">WEB</span>STUDIO
         </a>
 
-        <svg class="menu-hamburger">
-          <use href="./images/icons/icons.svg#iconmenu_40px"></use>
-        </svg>
-
         <div class="header-nav-wrapper">
           <nav class="header-nav-menu">
             <ul class="header-nav-menu-list list">
@@ -54,6 +50,14 @@
             </li>
           </ul>
         </div>
+
+        <!-- mobile button -->
+        <button class="mobile-btn js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="menu-hamburger">
+            <use href="./images/icons/icons.svg#iconmenu_40px"></use>
+          </svg>
+        </button>
+        <!-- /mobile button/ -->
       </div>
     </header>
 
@@ -103,7 +107,7 @@
                     "
                   />
                   <source
-                    media="(min-width: 320px)"
+                    media="(max-width: 767px)"
                     srcset="
                       ./images/portfolio/mobile/banking-app-mob.jpg    1x,
                       ./images/portfolio/mobile/banking-app-mob@2x.jpg 2x
@@ -145,7 +149,7 @@
                     "
                   />
                   <source
-                    media="(min-width: 320px)"
+                    media="(max-width: 767px)"
                     srcset="
                       ./images/portfolio/mobile/cashless-payment-mob.jpg    1x,
                       ./images/portfolio/mobile/cashless-payment-mob@2x.jpg 2x
@@ -187,7 +191,7 @@
                     "
                   />
                   <source
-                    media="(min-width: 320px)"
+                    media="(max-width: 767px)"
                     srcset="
                       ./images/portfolio/mobile/meditaion-app-mob.jpg    1x,
                       ./images/portfolio/mobile/meditaion-app-mob@2x.jpg 2x
@@ -229,7 +233,7 @@
                     "
                   />
                   <source
-                    media="(min-width: 320px)"
+                    media="(max-width: 767px)"
                     srcset="
                       ./images/portfolio/mobile/taxi-service-mob.jpg    1x,
                       ./images/portfolio/mobile/taxi-service-mob@2x.jpg 2x
@@ -271,7 +275,7 @@
                     "
                   />
                   <source
-                    media="(min-width: 320px)"
+                    media="(max-width: 767px)"
                     srcset="
                       ./images/portfolio/mobile/screen-illustrations-mob.jpg    1x,
                       ./images/portfolio/mobile/screen-illustrations-mob@2x.jpg 2x
@@ -313,7 +317,7 @@
                     "
                   />
                   <source
-                    media="(min-width: 320px)"
+                    media="(max-width: 767px)"
                     srcset="
                       ./images/portfolio/mobile/online-courses-mob.jpg    1x,
                       ./images/portfolio/mobile/online-courses-mob@2x.jpg 2x
@@ -355,7 +359,7 @@
                     "
                   />
                   <source
-                    media="(min-width: 320px)"
+                    media="(max-width: 767px)"
                     srcset="
                       ./images/portfolio/mobile/instagram-stories-mob.jpg    1x,
                       ./images/portfolio/mobile/instagram-stories-mob@2x.jpg 2x
@@ -397,7 +401,7 @@
                     "
                   />
                   <source
-                    media="(min-width: 320px)"
+                    media="(max-width: 767px)"
                     srcset="
                       ./images/portfolio/mobile/organic-food-mob.jpg    1x,
                       ./images/portfolio/mobile/organic-food-mob@2x.jpg 2x
@@ -439,7 +443,7 @@
                     "
                   />
                   <source
-                    media="(min-width: 320px)"
+                    media="(max-width: 767px)"
                     srcset="
                       ./images/portfolio/mobile/fresh-coffee-mob.jpg    1x,
                       ./images/portfolio/mobile/fresh-coffee-mob@2x.jpg 2x
@@ -540,5 +544,74 @@
         </div>
       </div>
     </footer>
+
+    <!-- MOBILE MENU -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="mobile-close-btn js-close-menu">
+        <svg width="8" height="8">
+          <use href="./images/icons/icons.svg#close-black"></use>
+        </svg>
+      </button>
+
+      <nav class="mobile-nav-menu">
+        <ul class="mobile-nav-menu-list list">
+          <li class="mobile-nav-menu-item">
+            <a class="mobile-nav-menu-link link" href="./index.html">Studio</a>
+          </li>
+          <li class="mobile-nav-menu-item">
+            <a class="mobile-current-page link" href="./portfolio.html">Portfolio</a>
+          </li>
+          <li class="mobile-nav-menu-item">
+            <a class="mobile-nav-menu-link link" href="">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="mobile-contact-list list">
+        <li class="mobile-contact-item">
+          <a class="mobile-contact-link link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+        </li>
+        <li class="mobile-contact-item">
+          <a class="mail-contact-link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </li>
+      </ul>
+
+      <ul class="team-social-list list">
+        <li>
+          <a class="team-social-link" href="#" aria-label="link-instagram">
+            <svg class="team-social-icon">
+              <use href="./images/icons/icons.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a class="team-social-link" href="#" aria-label="link-twitter">
+            <svg class="team-social-icon">
+              <use href="./images/icons/icons.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a class="team-social-link" href="#" aria-label="link-facebook">
+            <svg class="team-social-icon">
+              <use href="./images/icons/icons.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a class="team-social-link" href="#" aria-label="link-linkedin">
+            <svg class="team-social-icon">
+              <use href="./images/icons/icons.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
