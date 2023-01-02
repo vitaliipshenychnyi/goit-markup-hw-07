@@ -258,6 +258,11 @@ ul {
     display: none;
   }
 
+  .header-wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
+
   .header-nav-wrapper {
     display: flex;
     flex-grow: 1;
@@ -1572,7 +1577,6 @@ ul {
   padding-left: 40px;
   padding-top: 80px;
   padding-bottom: 40px;
-  outline: 1px solid red;
 
   background-color: #fff;
 
