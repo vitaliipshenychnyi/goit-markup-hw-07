@@ -1580,6 +1580,7 @@ ul {
 
   background-color: #fff;
 
+  overflow: auto;
   transform: translateX(100%);
   transition: transform var(--transition-fast);
 }
