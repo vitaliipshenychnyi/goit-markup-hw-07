@@ -249,6 +249,10 @@ ul {
     display: flex;
     width: 100%;
   }
+
+  .mobile-menu {
+    display: none;
+  }
 }
 
 .header-nav-menu {
@@ -353,6 +357,7 @@ ul {
   top: 0;
   padding-top: 80px;
   padding-left: 40px;
+  padding-right: 40px;
   padding-bottom: 40px;
   z-index: 100;
 
@@ -428,9 +433,9 @@ ul {
   color: var(--color-font-acent);
 }
 
-@media screen and (max-width: 378px) {
+@media screen and (max-width: 320px) {
   .mobile-menu-tel-link {
-    font-size: 30px;
+    font-size: 24px;
   }
 }
 
@@ -1493,6 +1498,24 @@ ul {
 .modal-form-input:focus + .modal-form-input-icon {
   fill: var(--color-modal-accent);
 }
+
+/* =====data validation===== */
+.modal-form-input:not(:placeholder-shown):required:valid {
+  border-color: #31d0aa;
+}
+
+.modal-form-input:not(:placeholder-shown):required:invalid {
+  border-color: #d03131;
+}
+
+.modal-form-input:not(:placeholder-shown):required:valid + .modal-form-input-icon {
+  fill: #31d0aa;
+}
+
+.modal-form-input:not(:placeholder-shown):required:invalid + .modal-form-input-icon {
+  fill: #d03131;
+}
+/* /////data validation///// */
 
 .modal-form-message {
   padding-left: 16px;
