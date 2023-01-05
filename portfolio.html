@@ -20,26 +20,37 @@
   <body>
     <!-- HEADER -->
     <header class="header header-shadow">
-      <div class="header-wrapper container">
-        <a class="header-logo link" href="./index.html">
-          <span class="logo-acent">WEB</span>STUDIO
-        </a>
+      <div class="header-menu-wrapper container">
+        <a class="logo link" href="./index.html"><span class="logo-acent">WEB</span>STUDIO</a>
+
+        <!-- =====mobile btn===== -->
+        <button
+          class="header-mobile-btn js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-icon" width="32" height="22">
+            <use href="./images/icons/icons.svg#menu"></use>
+          </svg>
+        </button>
+        <!-- /////mobile btn///// -->
 
         <div class="header-nav-wrapper">
           <nav class="header-nav-menu">
             <ul class="header-nav-menu-list list">
-              <li class="header-nav-menu-item">
-                <a class="header-nav-menu-link link" href="./index.html">Studio</a>
+              <li class="nav-menu-item">
+                <a class="nav-menu-link link" href="./index.html">Studio</a>
               </li>
-              <li class="header-nav-menu-item">
-                <a class="current-page link" href="./portfolio.html">Portfolio</a>
+              <li class="nav-menu-item">
+                <a class="current link link" href="./portfolio.html">Portfolio</a>
               </li>
-              <li class="header-nav-menu-item">
-                <a class="header-nav-menu-link link" href="">Contacts</a>
+              <li class="nav-menu-item">
+                <a class="nav-menu-link link" href="">Contacts</a>
               </li>
             </ul>
           </nav>
-          <ul class="header-contact-list list">
+          <ul class="header-contact list">
             <li class="header-contact-item">
               <a class="header-contact-link link" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
@@ -50,21 +61,82 @@
             </li>
           </ul>
         </div>
+      </div>
 
-        <!-- mobile button -->
-        <button class="mobile-btn js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-          <svg class="menu-hamburger">
-            <use href="./images/icons/icons.svg#menu"></use>
+      <!-- =====mobile menu===== -->
+      <div class="mobile-menu js-menu-container" id="mobile-menu">
+        <button class="mobile-menu-close-btn js-close-menu" type="button">
+          <svg width="8" height="8">
+            <use href="./images/icons/icons.svg#close-black"></use>
           </svg>
         </button>
-        <!-- /mobile button/ -->
+
+        <ul class="mobile-menu-list list">
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-link link" href="./index.html">Studio</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-link mobile-current link" href="./portfolio.html">Portfolio</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-link link" href="">Contacts</a>
+          </li>
+        </ul>
+
+        <ul class="mobile-menu-contact list">
+          <li class="mobile-menu-contact-item">
+            <a class="mobile-menu-tel-link link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+          </li>
+          <li class="mobile-menu-contact-item">
+            <a class="mobile-menu-email-link link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li>
+            <ul class="mobile-social-list mobile list">
+              <li>
+                <a class="team-social-link" href="#" aria-label="link-instagram">
+                  <svg class="team-social-icon">
+                    <use href="./images/icons/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a class="team-social-link" href="#" aria-label="link-twitter">
+                  <svg class="team-social-icon">
+                    <use href="./images/icons/icons.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a class="team-social-link" href="#" aria-label="link-facebook">
+                  <svg class="team-social-icon">
+                    <use href="./images/icons/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a class="team-social-link" href="#" aria-label="link-linkedin">
+                  <svg class="team-social-icon">
+                    <use href="./images/icons/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
+      <!-- /////mobile menu///// -->
     </header>
 
     <main>
+      <!-- PORTFOLIO -->
       <section class="portfolio section">
-        <div class="portfolio-wrapper container">
-          <!-- filters button -->
+        <div class="container">
+          <!-- =====filters button===== -->
           <ul class="btn-list list">
             <li><button class="btn-filters" type="button" aria-label="filter-All">All</button></li>
 
@@ -86,8 +158,9 @@
               </button>
             </li>
           </ul>
+          <!-- /////filters button///// -->
 
-          <!-- examples -->
+          <!-- =====examples===== -->
           <ul class="examples list">
             <li class="examples-item">
               <div class="overlay">
@@ -97,28 +170,25 @@
                     srcset="
                       ./images/portfolio/desktop/banking-app-dt.jpg    1x,
                       ./images/portfolio/desktop/banking-app-dt@2x.jpg 2x
-                    "
-                  />
+                    " />
                   <source
                     media="(min-width: 768px)"
                     srcset="
                       ./images/portfolio/tablet/banking-app-tab.jpg    1x,
                       ./images/portfolio/tablet/banking-app-tab@2x.jpg 2x
-                    "
-                  />
+                    " />
                   <source
                     media="(max-width: 767px)"
                     srcset="
                       ./images/portfolio/mobile/banking-app-mob.jpg    1x,
                       ./images/portfolio/mobile/banking-app-mob@2x.jpg 2x
-                    "
-                  />
+                    " />
                   <img
                     class="examples-image"
-                    src="./images/portfolio/desktop/banking-app-dt.jpg"
+                    srcset="./images/portfolio/mobile/banking-app-mob@2x.jpg 2x"
+                    src="./images/portfolio/mobile/banking-app-mob.jpg"
                     alt="Banking App Interface Concept"
-                  />
-                </picture>
+                /></picture>
 
                 <p class="overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
@@ -126,8 +196,8 @@
                 </p>
               </div>
               <div class="examples-description">
-                <h3 class="app-caption">Banking App Interface Concept</h3>
-                <p class="app-text">App</p>
+                <h3 class="examples-caption">Banking App Interface Concept</h3>
+                <p class="examples-text">App</p>
               </div>
             </li>
 
@@ -168,8 +238,8 @@
                 </p>
               </div>
               <div class="examples-description">
-                <h3 class="app-caption">Cashless Payment</h3>
-                <p class="app-text">Marketing</p>
+                <h3 class="examples-caption">Cashless Payment</h3>
+                <p class="examples-text">Marketing</p>
               </div>
             </li>
 
@@ -210,8 +280,8 @@
                 </p>
               </div>
               <div class="examples-description">
-                <h3 class="app-caption">Meditaion Appt</h3>
-                <p class="app-text">App</p>
+                <h3 class="examples-caption">Meditaion Appt</h3>
+                <p class="examples-text">App</p>
               </div>
             </li>
 
@@ -252,8 +322,8 @@
                 </p>
               </div>
               <div class="examples-description">
-                <h3 class="app-caption">Taxi Service</h3>
-                <p class="app-text">Marketing</p>
+                <h3 class="examples-caption">Taxi Service</h3>
+                <p class="examples-text">Marketing</p>
               </div>
             </li>
 
@@ -294,8 +364,8 @@
                 </p>
               </div>
               <div class="examples-description">
-                <h3 class="app-caption">Screen Illustrations</h3>
-                <p class="app-text">Design</p>
+                <h3 class="examples-caption">Screen Illustrations</h3>
+                <p class="examples-text">Design</p>
               </div>
             </li>
 
@@ -336,8 +406,8 @@
                 </p>
               </div>
               <div class="examples-description">
-                <h3 class="app-caption">Online Courses</h3>
-                <p class="app-text">Marketing</p>
+                <h3 class="examples-caption">Online Courses</h3>
+                <p class="examples-text">Marketing</p>
               </div>
             </li>
 
@@ -378,8 +448,8 @@
                 </p>
               </div>
               <div class="examples-description">
-                <h3 class="app-caption">Instagram Stories Concept</h3>
-                <p class="app-text">Design</p>
+                <h3 class="examples-caption">Instagram Stories Concept</h3>
+                <p class="examples-text">Design</p>
               </div>
             </li>
 
@@ -420,8 +490,8 @@
                 </p>
               </div>
               <div class="examples-description">
-                <h3 class="app-caption">Organic Food</h3>
-                <p class="app-text">Web Site</p>
+                <h3 class="examples-caption">Organic Food</h3>
+                <p class="examples-text">Web Site</p>
               </div>
             </li>
 
@@ -462,77 +532,76 @@
                 </p>
               </div>
               <div class="examples-description">
-                <h3 class="app-caption">Fresh Coffee</h3>
-                <p class="app-text">Web Site</p>
+                <h3 class="examples-caption">Fresh Coffee</h3>
+                <p class="examples-text">Web Site</p>
               </div>
             </li>
           </ul>
+          <!-- /////examples///// -->
         </div>
       </section>
     </main>
 
-    <footer class="footer section">
-      <div class="footer-wrapper container">
-        <!-- footer-logo -->
-        <div class="footer-container">
-          <a class="footer-logo link" href="./index.html">
-            <span class="logo-acent">WEB</span>STUDIO
-          </a>
-          <p class="footer-text">
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <!-- =====logo===== -->
+        <div class="logo-foter-container">
+          <a class="logo logo-footer link" href="./index.html"
+            ><span class="logo-acent">WEB</span>STUDIO</a
+          >
+          <p class="logo-text">
             Increase the flow of customers and sales for your business with digital marketing &
             growth solutions.
           </p>
         </div>
+        <!-- /////logo///// -->
 
-        <!-- Social media -->
-        <div class="social-container">
-          <h3 class="footer-title">Social media</h3>
-          <ul class="footer-social-list list">
+        <!-- =====Social media===== -->
+        <div class="social">
+          <h3 class="social-title">Social media</h3>
+          <ul class="social-list list">
             <li>
-              <a class="footer-social-link" href="#">
-                <svg class="footer-social-icon">
+              <a class="social-link-footer" href="#">
+                <svg class="social-icon-footer">
                   <use href="./images/icons/icons.svg#instagram"></use>
                 </svg>
               </a>
             </li>
 
             <li>
-              <a class="footer-social-link" href="#">
-                <svg class="footer-social-icon">
+              <a class="social-link-footer" href="#">
+                <svg class="social-icon-footer">
                   <use href="./images/icons/icons.svg#twitter"></use>
                 </svg>
               </a>
             </li>
 
             <li>
-              <a class="footer-social-link" href="#">
-                <svg class="footer-social-icon">
+              <a class="social-link-footer" href="#">
+                <svg class="social-icon-footer">
                   <use href="./images/icons/icons.svg#facebook"></use>
                 </svg>
               </a>
             </li>
 
             <li>
-              <a class="footer-social-link" href="#">
-                <svg class="footer-social-icon">
+              <a class="social-link-footer" href="#">
+                <svg class="social-icon-footer">
                   <use href="./images/icons/icons.svg#linkedin"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
+        <!-- /////Social media///// -->
 
-        <!-- Subscribe -->
-        <div class="subscribe-container">
-          <h3 class="footer-title">Subscribe</h3>
-          <form class="footer-subscribe-form">
-            <label class="footer-subscribe-label">
-              <input
-                class="footer-subscribe-input"
-                name="user-email"
-                type="email"
-                placeholder="E-mail"
-              />
+        <!-- =====Subscribe===== -->
+        <div class="subsribe">
+          <h3 class="subscribe-title">Subscribe</h3>
+          <form class="footer-input">
+            <label class="footer-label">
+              <input class="footer-field" name="user-email" type="email" placeholder="E-mail" />
             </label>
             <button class="footer-btn" type="submit">
               Subscribe
@@ -542,76 +611,10 @@
             </button>
           </form>
         </div>
+        <!-- /////Subscribe///// -->
       </div>
     </footer>
 
-    <!-- MOBILE MENU -->
-    <div class="menu-container js-menu-container" id="mobile-menu">
-      <button class="mobile-close-btn js-close-menu">
-        <svg width="8" height="8">
-          <use href="./images/icons/icons.svg#close-black"></use>
-        </svg>
-      </button>
-
-      <nav class="mobile-nav-menu">
-        <ul class="mobile-nav-menu-list list">
-          <li class="mobile-nav-menu-item">
-            <a class="mobile-nav-menu-link link" href="./index.html">Studio</a>
-          </li>
-          <li class="mobile-nav-menu-item">
-            <a class="mobile-current-page link" href="./portfolio.html">Portfolio</a>
-          </li>
-          <li class="mobile-nav-menu-item">
-            <a class="mobile-nav-menu-link link" href="">Contacts</a>
-          </li>
-        </ul>
-      </nav>
-
-      <ul class="mobile-contact-list list">
-        <li class="mobile-contact-item">
-          <a class="mobile-contact-link link" href="tel:+110001111111">+11 (000) 111-11-11</a>
-        </li>
-        <li class="mobile-contact-item">
-          <a class="mail-contact-link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-        </li>
-      </ul>
-
-      <ul class="team-social-list list">
-        <li>
-          <a class="team-social-link" href="#" aria-label="link-instagram">
-            <svg class="team-social-icon">
-              <use href="./images/icons/icons.svg#instagram"></use>
-            </svg>
-          </a>
-        </li>
-
-        <li>
-          <a class="team-social-link" href="#" aria-label="link-twitter">
-            <svg class="team-social-icon">
-              <use href="./images/icons/icons.svg#twitter"></use>
-            </svg>
-          </a>
-        </li>
-
-        <li>
-          <a class="team-social-link" href="#" aria-label="link-facebook">
-            <svg class="team-social-icon">
-              <use href="./images/icons/icons.svg#facebook"></use>
-            </svg>
-          </a>
-        </li>
-
-        <li>
-          <a class="team-social-link" href="#" aria-label="link-linkedin">
-            <svg class="team-social-icon">
-              <use href="./images/icons/icons.svg#linkedin"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
