@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300&display=swap"
     />
     <link
       rel="stylesheet"
@@ -29,6 +29,7 @@
           type="button"
           aria-expanded="false"
           aria-controls="mobile-menu"
+          aria-label="Button order service"
         >
           <svg class="menu-icon" width="32" height="22">
             <use href="./images/icons/icons.svg#menu"></use>
@@ -65,7 +66,11 @@
 
       <!-- =====mobile menu===== -->
       <div class="mobile-menu js-menu-container" id="mobile-menu">
-        <button class="mobile-menu-close-btn js-close-menu" type="button">
+        <button
+          class="mobile-menu-close-btn js-close-menu"
+          type="button"
+          aria-label="Button close mobile menu"
+        >
           <svg width="8" height="8">
             <use href="./images/icons/icons.svg#close-black"></use>
           </svg>
@@ -138,22 +143,28 @@
         <div class="container">
           <!-- =====filters button===== -->
           <ul class="btn-list list">
-            <li><button class="btn-filters" type="button" aria-label="filter-All">All</button></li>
+            <li>
+              <button class="btn-filters" type="button" aria-label="Button filter All">All</button>
+            </li>
 
             <li>
-              <button class="btn-filters" type="button" aria-label="filter-Web Site">
+              <button class="btn-filters" type="button" aria-label="Button filter Web Site">
                 Web Site
               </button>
             </li>
 
-            <li><button class="btn-filters" type="button" aria-label="filter-App">App</button></li>
-
             <li>
-              <button class="btn-filters" type="button" aria-label="filter-Design">Design</button>
+              <button class="btn-filters" type="button" aria-label="Button filter App">App</button>
             </li>
 
             <li>
-              <button class="btn-filters" type="button" aria-label="filter-Marketing">
+              <button class="btn-filters" type="button" aria-label="Button filter Design">
+                Design
+              </button>
+            </li>
+
+            <li>
+              <button class="btn-filters" type="button" aria-label="Button filter Marketing">
                 Marketing
               </button>
             </li>
@@ -562,7 +573,7 @@
           <h3 class="social-title">Social media</h3>
           <ul class="social-list list">
             <li>
-              <a class="social-link-footer" href="#">
+              <a class="social-link-footer" href="#" aria-label="link-instagram">
                 <svg class="social-icon-footer">
                   <use href="./images/icons/icons.svg#instagram"></use>
                 </svg>
@@ -570,7 +581,7 @@
             </li>
 
             <li>
-              <a class="social-link-footer" href="#">
+              <a class="social-link-footer" href="#" aria-label="link-twitter">
                 <svg class="social-icon-footer">
                   <use href="./images/icons/icons.svg#twitter"></use>
                 </svg>
@@ -578,7 +589,7 @@
             </li>
 
             <li>
-              <a class="social-link-footer" href="#">
+              <a class="social-link-footer" href="#" aria-label="link-facebook">
                 <svg class="social-icon-footer">
                   <use href="./images/icons/icons.svg#facebook"></use>
                 </svg>
@@ -586,7 +597,7 @@
             </li>
 
             <li>
-              <a class="social-link-footer" href="#">
+              <a class="social-link-footer" href="#" aria-label="link-linkedin">
                 <svg class="social-icon-footer">
                   <use href="./images/icons/icons.svg#linkedin"></use>
                 </svg>
@@ -603,7 +614,7 @@
             <label class="footer-label">
               <input class="footer-field" name="user-email" type="email" placeholder="E-mail" />
             </label>
-            <button class="footer-btn" type="submit">
+            <button class="footer-btn" type="submit" aria-label="Button sibscribe">
               Subscribe
               <svg class="footer-btn-icon">
                 <use href="./images/icons/icons.svg#fly"></use>

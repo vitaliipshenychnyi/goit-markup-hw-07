@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300&display=swap"
     />
     <link
       rel="stylesheet"
@@ -29,6 +29,7 @@
           type="button"
           aria-expanded="false"
           aria-controls="mobile-menu"
+          aria-label="Button mobile menu"
         >
           <svg class="menu-icon" width="32" height="22">
             <use href="./images/icons/icons.svg#menu"></use>
@@ -65,7 +66,11 @@
 
       <!-- =====mobile menu===== -->
       <div class="mobile-menu js-menu-container" id="mobile-menu">
-        <button class="mobile-menu-close-btn js-close-menu" type="button">
+        <button
+          class="mobile-menu-close-btn js-close-menu"
+          type="button"
+          aria-label="Button close mobile menu"
+        >
           <svg width="8" height="8">
             <use href="./images/icons/icons.svg#close-black"></use>
           </svg>
@@ -137,7 +142,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions For Your Business</h1>
-          <button class="hero-btn" type="button" aria-label="Order Service" data-modal-open>
+          <button class="hero-btn" type="button" aria-label="Button order service" data-modal-open>
             Order Service
           </button>
         </div>
@@ -214,6 +219,8 @@
                 srcset="./images/projects/monitor@2x.jpg 2x"
                 src="./images/projects/monitor.jpg"
                 alt="monitor"
+                width="360"
+                height="300"
               />
             </li>
 
@@ -223,6 +230,8 @@
                 srcset="./images/projects/mobile-screens@2x.jpg 2x"
                 src="./images/projects/mobile-screens.jpg"
                 alt="mobile-screens"
+                width="360"
+                height="300"
               />
             </li>
 
@@ -232,6 +241,8 @@
                 srcset="./images/projects/telephone-in-hand@2x.jpg 2x"
                 src="./images/projects/telephone-in-hand.jpg"
                 alt="telephone-in-hand"
+                width="360"
+                height="300"
               />
             </li>
           </ul>
@@ -249,6 +260,8 @@
                 srcset="./images/team/mark-guerrero@2x.jpg 2x"
                 src="./images/team/mark-guerrero.jpg"
                 alt="Mark Guerrero"
+                width="264"
+                height="260"
               />
               <div class="team-description">
                 <h3 class="team-caption">Mark Guerrero</h3>
@@ -298,6 +311,8 @@
                 srcset="./images/team/tom-ford@2x.jpg 2x"
                 src="./images/team/tom-ford.jpg"
                 alt="Tom Ford"
+                width="264"
+                height="260"
               />
               <div class="team-description">
                 <h3 class="team-caption">Tom Ford</h3>
@@ -347,6 +362,8 @@
                 srcset="./images/team/camila-garcia@2x.jpg 2x"
                 src="./images/team/camila-garcia.jpg"
                 alt="Camila Garcia"
+                width="264"
+                height="260"
               />
               <div class="team-description">
                 <h3 class="team-caption">Camila Garcia</h3>
@@ -396,6 +413,8 @@
                 srcset="./images/team/daniel-wilson@2x.jpg 2x"
                 src="./images/team/daniel-wilson.jpg"
                 alt="Daniel Wilson"
+                width="264"
+                height="260"
               />
               <div class="team-description">
                 <h3 class="team-caption">Daniel Wilson</h3>
@@ -448,7 +467,7 @@
           <h2 class="section-title">Customers</h2>
           <ul class="customer-list list">
             <li class="customer-item">
-              <a class="customer-social-link" href="#">
+              <a class="customer-social-link" href="#" aria-label="link client-1">
                 <svg class="customer-icon">
                   <use href="./images/icons/icons.svg#client-1"></use>
                 </svg>
@@ -456,7 +475,7 @@
             </li>
 
             <li class="customer-item">
-              <a class="customer-social-link" href="#">
+              <a class="customer-social-link" href="#" aria-label="link client-2">
                 <svg class="customer-icon">
                   <use href="./images/icons/icons.svg#client-2"></use>
                 </svg>
@@ -464,7 +483,7 @@
             </li>
 
             <li class="customer-item">
-              <a class="customer-social-link" href="#">
+              <a class="customer-social-link" href="#" aria-label="link client-3">
                 <svg class="customer-icon">
                   <use href="./images/icons/icons.svg#client-3"></use>
                 </svg>
@@ -472,7 +491,7 @@
             </li>
 
             <li class="customer-item">
-              <a class="customer-social-link" href="#">
+              <a class="customer-social-link" href="#" aria-label="link client-4">
                 <svg class="customer-icon">
                   <use href="./images/icons/icons.svg#client-4"></use>
                 </svg>
@@ -480,7 +499,7 @@
             </li>
 
             <li class="customer-item">
-              <a class="customer-social-link" href="#">
+              <a class="customer-social-link" href="#" aria-label="link client-5">
                 <svg class="customer-icon">
                   <use href="./images/icons/icons.svg#client-5"></use>
                 </svg>
@@ -488,7 +507,7 @@
             </li>
 
             <li class="customer-item">
-              <a class="customer-social-link" href="#">
+              <a class="customer-social-link" href="#" aria-label="link client-6">
                 <svg class="customer-icon">
                   <use href="./images/icons/icons.svg#client-6"></use>
                 </svg>
@@ -519,7 +538,7 @@
           <h3 class="social-title">Social media</h3>
           <ul class="social-list list">
             <li>
-              <a class="social-link-footer" href="#">
+              <a class="social-link-footer" href="#" aria-label="link-instagram">
                 <svg class="social-icon-footer">
                   <use href="./images/icons/icons.svg#instagram"></use>
                 </svg>
@@ -527,7 +546,7 @@
             </li>
 
             <li>
-              <a class="social-link-footer" href="#">
+              <a class="social-link-footer" href="#" aria-label="link-twitter">
                 <svg class="social-icon-footer">
                   <use href="./images/icons/icons.svg#twitter"></use>
                 </svg>
@@ -535,7 +554,7 @@
             </li>
 
             <li>
-              <a class="social-link-footer" href="#">
+              <a class="social-link-footer" href="#" aria-label="link-facebook">
                 <svg class="social-icon-footer">
                   <use href="./images/icons/icons.svg#facebook"></use>
                 </svg>
@@ -543,7 +562,7 @@
             </li>
 
             <li>
-              <a class="social-link-footer" href="#">
+              <a class="social-link-footer" href="#" aria-label="link-linkedin">
                 <svg class="social-icon-footer">
                   <use href="./images/icons/icons.svg#linkedin"></use>
                 </svg>
@@ -560,7 +579,7 @@
             <label class="footer-label">
               <input class="footer-field" name="user-email" type="email" placeholder="E-mail" />
             </label>
-            <button class="footer-btn" type="submit">
+            <button class="footer-btn" type="submit" aria-label="Button sibscribe">
               Subscribe
               <svg class="footer-btn-icon">
                 <use href="./images/icons/icons.svg#fly"></use>
@@ -575,7 +594,12 @@
     <!-- MODAL WINDOW -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-close-btn" type="button" data-modal-close>
+        <button
+          class="modal-close-btn"
+          type="button"
+          aria-label="Button close modal menu"
+          data-modal-close
+        >
           <svg width="8" height="8">
             <use href="./images/icons/icons.svg#close-black"></use>
           </svg>
@@ -659,7 +683,7 @@
           <!-- /////checkbox///// -->
 
           <!-- =====button for send===== -->
-          <button class="modal-btn-send" type="submit">Send</button>
+          <button class="modal-btn-send" type="submit" aria-label="Button send">Send</button>
           <!-- /////button for send///// -->
         </form>
       </div>
