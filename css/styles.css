@@ -1277,6 +1277,7 @@ ul {
 .examples-image {
   display: block;
   width: 100%;
+  height: auto;
   background-color: var(--color-bg-overlay);
 }
 
