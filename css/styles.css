@@ -399,7 +399,7 @@ img {
 
 .mobile-menu-tel-link {
   font-weight: 600;
-  font-size: 36px;
+  font-size: 32px;
   line-height: calc(40 / 36);
   color: var(--color-ae5);
 }
@@ -416,6 +416,12 @@ img {
   display: flex;
   justify-content: space-between;
   max-width: 328px;
+}
+
+.mobile-social-icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--color-4fd);
 }
 /* ----- mobile menu ----- */
 /* ///// HEADER ///// */
@@ -729,7 +735,8 @@ img {
   gap: 24px;
 }
 
-.team-social-link {
+.team-social-link,
+.mobile-social-link {
   display: flex;
   justify-content: center;
   align-items: center;
